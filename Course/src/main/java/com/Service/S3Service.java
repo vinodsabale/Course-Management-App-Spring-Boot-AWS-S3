@@ -1,0 +1,36 @@
+package com.Service;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.model.ObjectMetadata;
+
+@Service
+public class S3Service {
+	private  AmazonS3 amazonS3;
+	@Value("${aws.s3.bucketName}")
+	private String bucketName;
+	public S3Service(AmazonS3 amazonS3) {
+		super();
+		this.amazonS3 = amazonS3;
+	}
+	public String uploadFile(MultipartFile file) {
+		try {
+			String fileName=UUID.randomUUID()+"-"+file.getOriginalFilename();
+			ObjectMetadata metadata = new ObjectMetadata();
+            metadata.setContentLength(file.getSize());
+            metadata.setContentType(file.getContentType());
+            amazonS3.putObject(bucketName,fileName,file.getInputStream(),metadata);
+            // public URL of uploaded object
+            return amazonS3.getUrl(bucketName, fileName).toString();
+
+		}catch(Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException("File uploded faild");
+		}
+	}
+}

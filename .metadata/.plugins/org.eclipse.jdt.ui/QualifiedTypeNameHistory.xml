@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="com.service.ProductService"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="com.amazonaws.auth.BasicAWSCredentials"/>
+    <fullyQualifiedTypeName name="com.amazonaws.services.s3.AmazonS3ClientBuilder"/>
+    <fullyQualifiedTypeName name="com.amazonaws.auth.AWSStaticCredentialsProvider"/>
+    <fullyQualifiedTypeName name="lombok.Value"/>
+    <fullyQualifiedTypeName name="com.Repository.CourseRepository"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="ch.qos.logback.core.model.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+</qualifiedTypeNameHistroy>

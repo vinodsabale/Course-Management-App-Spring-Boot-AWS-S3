@@ -1,0 +1,5 @@
+package com.Config;
+@Configuration
+public class AwsConfig {
+
+}

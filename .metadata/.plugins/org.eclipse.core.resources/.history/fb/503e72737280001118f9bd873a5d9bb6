@@ -1,0 +1,10 @@
+package com.Config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AwsConfig {
+		@Value("${aws.accessKeyId}")
+		private String accessKey;
+}

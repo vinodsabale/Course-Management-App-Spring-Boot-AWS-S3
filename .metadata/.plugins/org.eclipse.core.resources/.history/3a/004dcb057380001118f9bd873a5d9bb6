@@ -1,0 +1,15 @@
+package com.Service;
+
+import org.springframework.stereotype.Service;
+
+import com.amazonaws.services.s3.AmazonS3;
+
+import lombok.Value;
+
+@Service
+public class S3Service {
+	private AmazonS3 amazonS3;
+	@Value("${aws.s3.bucketName}")
+	private String bucketName;
+	
+}
